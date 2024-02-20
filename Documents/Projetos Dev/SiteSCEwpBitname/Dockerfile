@@ -1,14 +1,12 @@
-# Use the official Python image as the base image
-FROM python:3.8
+# Use a imagem base do Bitnami para o WordPress
+FROM bitnami/wordpress:latest
 
-# Set the working directory in the container
-WORKDIR /app
+# Defina as variáveis de ambiente para configurar o banco de dados MySQL
+ENV WORDPRESS_DATABASE_HOST=localhost \
+    WORDPRESS_DATABASE_NAME=wordpress \
+    WORDPRESS_DATABASE_USER=admin \
+    WORDPRESS_DATABASE_PASSWORD=168425Lsa@@
 
-# Copy the application files into the working directory
-COPY . /app
+# Exponha a porta padrão do WordPress
+EXPOSE 8080
 
-# Install the application dependencies
-RUN pip install -r requirements.txt
-
-# Define the entry point for the container
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
