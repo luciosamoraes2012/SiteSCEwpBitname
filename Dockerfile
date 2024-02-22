@@ -9,4 +9,3 @@ ENV WORDPRESS_DATABASE_HOST=localhost \
 
 # Exponha a porta padrão do WordPress
 EXPOSE 8080
-
