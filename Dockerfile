@@ -8,4 +8,4 @@ ENV WORDPRESS_DATABASE_HOST=localhost \
     WORDPRESS_DATABASE_PASSWORD=168425Lsa@@
 
 # Exponha a porta padrão do WordPress
-EXPOSE 8080
+EXPOSE 80
