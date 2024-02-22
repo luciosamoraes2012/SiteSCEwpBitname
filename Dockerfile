@@ -1,5 +1,5 @@
 # Use a imagem base do Bitnami para o WordPress
-FROM bitnami/wordpress:latest
+FROM wordpress:latest
 
 # Defina as variáveis de ambiente para configurar o banco de dados MySQL
 ENV WORDPRESS_DATABASE_HOST=localhost \
@@ -8,4 +8,4 @@ ENV WORDPRESS_DATABASE_HOST=localhost \
     WORDPRESS_DATABASE_PASSWORD=168425Lsa@@
 
 # Exponha a porta padrão do WordPress
-EXPOSE 80
+EXPOSE 8080
